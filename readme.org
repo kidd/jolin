@@ -1,0 +1,61 @@
+
+* Errors
+
+* Doc
+  - paths
+  - difference
+  - deep_merge
+
+
+
+* Collections
+  - DEFAULT_OPTIONS = {
+      :max_documents => 1000,
+      :raw => false,
+      :only_ids => false,
+      :reversed => false,
+      :excluded_fields_to_index => {}
+    }
+
+** Methods
+  - [ ] def initialize(storage, name, auto_increment = false)
+  - [ ] def name
+  - [ ] def redis
+  - [ ] def storage
+  - [ ] def auto_increment?
+  - [ ] def insert(docs, options = {})
+  - [ ] def delete(doc)
+  - [ ] def update(doc_dest, doc_source, options = {})
+  - [ ] def count
+  - [ ] def find(doc, options = {})
+  - [ ] def last_id
+  - [ ] def next_id
+  - [ ] def indexes(id)
+  - [ ] def merge_and_symbolize_options(options = {})
+  - [ ] def find_docs(doc)
+  - [ ] def check_selectors(sel)
+  - [ ] def find_type(obj)
+  - [ ] def fetch_ids_by_index(path)
+  - [ ] def delete_by_id(id)
+  - [ ] def remove_index(index, id)
+  - [ ] def add_index(path, id)
+  - [ ] def get_path_to_from_index(index)
+  - [ ] def idx_key(path_to, type, obj = nil)
+  - [ ] def idx_set_key(id)
+  - [ ] def doc_key(id)
+  - [ ] def doc_sset_key()
+
+
+
+* Storage
+  - namespace
+  - selectors
+  - redis
+
+** Methods
+  - collections => "namespace/collections"
+  - create_collection
+  - destroy_collection
+  - destroy_all
+  - info
+  - find_collections
